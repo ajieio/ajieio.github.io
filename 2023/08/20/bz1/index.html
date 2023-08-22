@@ -24,7 +24,7 @@
 <meta property="og:description" content="video数据库设计(暂行)1234567891011121314151617181920212223class Course(models.Model):    &quot;&quot;&quot;课程类&quot;&quot;&quot;    title &#x3D; models.CharField(max_length&#x3D;100)    description &#x3D; models.TextField(">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-20T05:55:56.000Z">
-<meta property="article:modified_time" content="2023-08-20T07:53:45.961Z">
+<meta property="article:modified_time" content="2023-08-22T17:02:26.405Z">
 <meta property="article:author" content="阿杰">
 <meta property="article:tag" content="阿杰， 阿杰客栈， 编程之路， 编程">
 <meta name="twitter:card" content="summary_large_image">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          4.2k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          14 分钟
+          36 分钟
         
       </span>
     
@@ -301,6 +301,24 @@
 </ol>
 <p>如果你依然遇到问题，确保你已经正确地配置了以上步骤，并检查 Django 版本是否支持该配置项。</p>
 <p>请注意，修改 <code>X_FRAME_OPTIONS</code> 设置可能会影响网站的安全性，因此在修改设置之前，请确保你了解该设置可能带来的潜在风险，并根据具体情况进行设置。</p>
+<h4 id="二、viedo时间"><a href="#二、viedo时间" class="headerlink" title="二、viedo时间"></a>二、viedo时间</h4><p>要获取一个视频的时间，你可以使用Python中的第三方库<code>moviepy</code>。</p>
+<p>首先，确保你已经安装了<code>moviepy</code>库。你可以使用以下命令来安装它：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">pip <span class="hljs-keyword">install</span> moviepy<br></code></pre></td></tr></table></figure>
+
+<p>接下来，可以使用以下代码来获取视频的时间：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> moviepy.editor <span class="hljs-keyword">import</span> VideoFileClip<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_video_duration</span>(<span class="hljs-params">file_path</span>):<br>    video = VideoFileClip(file_path)<br>    duration = video.duration<br>    <span class="hljs-keyword">return</span> duration<br><br><span class="hljs-comment"># 指定视频文件路径，并调用函数获取时间</span><br>file_path = <span class="hljs-string">&quot;path/to/your/video.mp4&quot;</span>  <span class="hljs-comment"># 替换为你的视频文件路径</span><br>duration = get_video_duration(file_path)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;视频时长:&quot;</span>, duration, <span class="hljs-string">&quot;秒&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>在代码中，我们定义了一个名为<code>get_video_duration</code>的函数来获取视频的时长。该函数接受视频文件的路径，并使用<code>VideoFileClip</code>类加载视频。然后，我们可以使用<code>duration</code>属性来获取视频的时长（以秒为单位）。</p>
+<p>请注意，代码中需要替换<code>file_path</code>变量的值为你要获取时间的视频的实际路径。另外，<code>moviepy</code>库还提供了其他功能，比如剪辑视频、提取音频等操作，你可以根据需要进行进一步的学习和使用。</p>
+<p>要根据视频的时长将其格式化为不同的时间显示格式，你可以使用Python中的<code>datetime</code>模块来实现。</p>
+<p>以下是一个示例代码，根据视频的时长将其格式化为不同的时间显示格式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> datetime<br><span class="hljs-keyword">from</span> moviepy.editor <span class="hljs-keyword">import</span> VideoFileClip<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">format_duration</span>(<span class="hljs-params">duration</span>):<br>    <span class="hljs-keyword">if</span> duration &lt; <span class="hljs-number">3600</span>:  <span class="hljs-comment"># 小于一小时</span><br>        time_format = <span class="hljs-string">&quot;%M:%S&quot;</span><br>    <span class="hljs-keyword">else</span>:  <span class="hljs-comment"># 大于一小时</span><br>        time_format = <span class="hljs-string">&quot;%H:%M:%S&quot;</span><br><br>    formatted_duration = <span class="hljs-built_in">str</span>(datetime.timedelta(seconds=duration))<br>    formatted_duration = datetime.datetime.strptime(formatted_duration, <span class="hljs-string">&quot;%H:%M:%S&quot;</span>).time().strftime(time_format)<br>    <span class="hljs-keyword">return</span> formatted_duration<br><br><span class="hljs-comment"># 指定视频文件路径，并调用函数获取时间并格式化</span><br>file_path = <span class="hljs-string">&quot;path/to/your/video.mp4&quot;</span>  <span class="hljs-comment"># 替换为你的视频文件路径</span><br>video = VideoFileClip(file_path)<br>duration = video.duration<br>formatted_duration = format_duration(duration)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;视频时长:&quot;</span>, formatted_duration)<br></code></pre></td></tr></table></figure>
+
+<p>在代码中，我们定义了一个名为<code>format_duration</code>的函数。如果视频的时长小于3600秒（即一小时），我们使用<code>&quot;%M:%S&quot;</code>格式（分钟:秒）来格式化时间。否则，我们使用<code>&quot;%H:%M:%S&quot;</code>格式（小时:分钟:秒）。然后，我们将视频时长转换为<code>datetime.timedelta</code>对象，并使用<code>strptime</code>和<code>strftime</code>方法来将其格式化。</p>
+<p>同样，请注意替换<code>file_path</code>变量的值为你要获取时间的视频的实际路径。</p>
+<p>这样，无论视频的时长是小于一小时还是大于一小时，输出的时间格式将相应地进行格式化。</p>
+<h3 id="数据库修改"><a href="#数据库修改" class="headerlink" title="##数据库修改##"></a>##数据库修改##</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models<br><span class="hljs-keyword">from</span> django.db.models.signals <span class="hljs-keyword">import</span> pre_save<br><span class="hljs-keyword">from</span> django.dispatch <span class="hljs-keyword">import</span> receiver<br><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> timedelta<br><span class="hljs-keyword">from</span> moviepy.editor <span class="hljs-keyword">import</span> VideoFileClip<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Lesson</span>(models.Model):<br>    <span class="hljs-string">&quot;&quot;&quot;课程中的单节课类&quot;&quot;&quot;</span><br>    course = models.ForeignKey(Course, on_delete=models.CASCADE)<br>    title = models.CharField(max_length=<span class="hljs-number">100</span>)<br>    video = models.FileField(upload_to=<span class="hljs-string">&#x27;lessons/&#x27;</span>)<br>    seenum = models.IntegerField(default=<span class="hljs-number">0</span>)<br>    sequence = models.PositiveIntegerField()  <span class="hljs-comment"># 正整数，课程中课的顺序</span><br>    duration = models.DurationField(null=<span class="hljs-literal">True</span>, blank=<span class="hljs-literal">True</span>)  <span class="hljs-comment"># 视频时长</span><br><br><span class="hljs-meta">@receiver(<span class="hljs-params">pre_save, sender=Lesson</span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">calculate_duration</span>(<span class="hljs-params">sender, instance, **kwargs</span>):<br>    <span class="hljs-keyword">if</span> instance.video:<br>        <span class="hljs-comment"># 使用moviepy获取视频时长</span><br>        video_path = instance.video.path<br>        clip = VideoFileClip(video_path)<br>        duration = clip.duration<br>        clip.close()<br><br>        <span class="hljs-comment"># 转换为timedelta对象并赋值给duration字段</span><br>        instance.duration = timedelta(seconds=duration)<br><br>pre_save.connect(calculate_duration, sender=Lesson)<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
