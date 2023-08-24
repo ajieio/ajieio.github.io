@@ -4,7 +4,7 @@
   
   
   <entry>
-    <title>1_num</title>
+    <title>1～n这n个整数的十进制表示中1出现的次数</title>
     <link href="/2023/08/24/num1/"/>
     <url>/2023/08/24/num1/</url>
     
@@ -17,6 +17,14 @@
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>力扣</tag>
+      
+      <tag>算法</tag>
+      
+    </tags>
     
   </entry>
   
