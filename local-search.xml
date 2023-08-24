@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>1_num</title>
+    <link href="/2023/08/24/num1/"/>
+    <url>/2023/08/24/num1/</url>
+    
+    <content type="html"><![CDATA[<p>输入一个整数 <code>n</code> ，求1～n这n个整数的十进制表示中1出现的次数。</p><p>例如，输入12，1～12这些整数中包含1 的数字有1、10、11和12，1一共出现了5次。</p><p><strong>示例 1：</strong></p><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs abnf">输入：n <span class="hljs-operator">=</span> <span class="hljs-number">12</span><br>输出：<span class="hljs-number">5</span><br></code></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs abnf">输入：n <span class="hljs-operator">=</span> <span class="hljs-number">13</span><br>输出：<span class="hljs-number">6</span><br></code></pre></td></tr></table></figure><p><strong>限制：</strong></p><ul><li><code>1 &lt;= n &lt; 2^31</code></li></ul><h2 id="一、for循环"><a href="#一、for循环" class="headerlink" title="一、for循环"></a>一、for循环</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">countDigitOne</span>(<span class="hljs-params">self, n</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type n: int</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        num = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):<br>            item_str = <span class="hljs-built_in">str</span>(item)<br>            <span class="hljs-keyword">for</span> item_srt_one <span class="hljs-keyword">in</span> item_str:<br>                <span class="hljs-keyword">if</span> item_srt_one == <span class="hljs-string">&#x27;1&#x27;</span>:<br>                    num += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> num<br>s = Solution()<br></code></pre></td></tr></table></figure><p>最终报错–&lt;内存溢出&gt;</p><p><img src="/../img/1-num/image-20230824213104452.png" alt="image-20230824213104452"></p><h2 id="二、找规律"><a href="#二、找规律" class="headerlink" title="二、找规律"></a>二、找规律</h2><p><img src="/../img/num1/image-20230824230315261.png" alt="image-20230824230315261"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>力扣</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>标新取异项目</title>
     <link href="/2023/08/20/bz1/"/>
     <url>/2023/08/20/bz1/</url>
