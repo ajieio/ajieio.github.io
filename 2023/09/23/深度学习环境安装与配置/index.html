@@ -23,20 +23,13 @@
 <meta property="og:site_name" content="编程之路-阿杰客栈">
 <meta property="og:description" content="1.安装CUDA1.安装Anaconda；2.安装配置CUDA(1) 下载CUDA并安装 详细步骤      (2) 检查CUDA安装是否成功：   进入cmd，输入nvcc –V，出现左下图结果，则完成安装； (3) 配置环境变量：   \1) 右击我的电脑，选择“属性”，选择“高级系统设置”，点击“环境变量”;    \2) 找到“Path”，添加CUDA安装路径下的相关环境变量，如由下图。例">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204132242.png">
-<meta property="og:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204213468.png">
-<meta property="og:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204222929.png">
-<meta property="og:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204230459.png">
-<meta property="og:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204237179.png">
-<meta property="og:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204243438.png">
-<meta property="og:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204936142.png">
-<meta property="og:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923205118953.png">
+<meta property="og:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/index.png">
 <meta property="article:published_time" content="2023-09-23T12:38:30.000Z">
-<meta property="article:modified_time" content="2023-09-23T12:54:42.583Z">
+<meta property="article:modified_time" content="2023-09-23T13:02:47.379Z">
 <meta property="article:author" content="阿杰">
 <meta property="article:tag" content="神经网络与深度学习">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204132242.png">
+<meta name="twitter:image" content="https://ajieio.github.io/img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/index.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -291,7 +284,7 @@
 <p><img src="/../img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204230459.png" srcset="/img/loading.gif" lazyload alt="image-20230923204230459"></p>
 <p><img src="/../img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204237179.png" srcset="/img/loading.gif" lazyload alt="image-20230923204237179"></p>
 <p><img src="/../img/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20230923204243438.png" srcset="/img/loading.gif" lazyload alt="image-20230923204243438"></p>
-<h4 id="2-检查CUDA安装是否成功："><a href="#2-检查CUDA安装是否成功：" class="headerlink" title="(2) 检查CUDA安装是否成功："></a>(2) 检查CUDA安装是否成功：</h4><p>   进入cmd，输入nvcc –V，出现左下图结果，则完成安装；</p>
+<h4 id="2-检查CUDA安装是否成功："><a href="#2-检查CUDA安装是否成功：" class="headerlink" title="(2) 检查CUDA安装是否成功："></a>(2) 检查CUDA安装是否成功：</h4><p>   进入cmd，输入<code>nvcc –V</code>，出现左下图结果，则完成安装；</p>
 <h4 id="3-配置环境变量："><a href="#3-配置环境变量：" class="headerlink" title="(3) 配置环境变量："></a>(3) 配置环境变量：</h4><p>   \1) 右击我的电脑，选择“属性”，选择“高级系统设置”，点击“环境变量”;</p>
 <p>   \2) 找到“Path”，添加CUDA安装路径下的相关环境变量，如由下图。例如：</p>
 <p>​      C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\bin</p>
@@ -314,18 +307,18 @@
 <p>\3. 安装Pytorch</p>
 <p>(4)环境配置成功，激活环境：<code>conda activate mypytorch</code>，进入虚拟环境；</p>
 <p>(5)在虚拟环境下，安装torch1.9.0</p>
-<p>  <code> pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f *https://download.pytorch.org/whl/torch_stable.html*</code></p>
+<p>  <code> pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html</code></p>
 <p>Tip: 如果速度比较慢，可以使用清华源下载：</p>
-<p>   <code>pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio===0.9.0 -f *https://download.pytorch.org/whl/torch_stable.html* -i *https://pypi.tuna.tsinghua.edu.cn/simple*</code></p>
+<p>   <code>pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio===0.9.0 -f https://download.pytorch.org/whl/torch_stable.html -i *https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
 <p>   或</p>
-<p>   <code>pip3 install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio===0.9.0 -f *https://download.pytorch.org/whl/torch_stable.html* -i *https://pypi.tuna.tsinghua.edu.cn/simple*</code></p>
+<p>   <code>pip3 install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio===0.9.0 -f https://download.pytorch.org/whl/torch_stable.html -i *https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
 <p>   等待所有的安装自行结束，则完成安装。</p>
 <p>\4. 验证Pytorch</p>
 <p>(1)验证安装是否全部完成；</p>
-<p>   输入：<code>*python*</code>，出现python代码指示，并显示python版本号，与创建环境时的python版本应该是一致的；</p>
+<p>   输入：<code>python</code>，出现python代码指示，并显示python版本号，与创建环境时的python版本应该是一致的；</p>
 <p>   手动分别输入以下代码，每输入一行，按enter键；</p>
-<p>   <code>*import torch*</code></p>
-<p>   <code>*torch.__version**__*  </code>  这时会出现‘1.9.0+cu111’的提示，表示安装完成；</p>
+<p>   <code>import torch</code></p>
+<p>   <code>torch.__version__  </code>  这时会出现‘1.9.0+cu111’的提示，表示安装完成；</p>
 <p>(2)此时，就可以使用自己的示例代码工程，开展深度学习调试工作了。</p>
 <p>备注：</p>
 <p>​    以上配置工作仅仅完成了深度学习的基础环境配置工作，更多的调试，往往需要结合具体项目代码，不断的运行工程代码，根据提示补充该项目工程所需要的依赖库，例如：opencv等库，基本都使用<em>pip install + …</em>的方式来安装。</p>
