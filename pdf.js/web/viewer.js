@@ -3221,9 +3221,9 @@ exports.PDFViewerApplication = PDFViewerApplication;
         return;
       }
       const fileOrigin = new URL(file, window.location.href).origin;
-      if (fileOrigin !== viewerOrigin) {
-        throw new Error("file origin does not match viewer's");
-      }
+      // if (fileOrigin !== viewerOrigin) {
+      //   throw new Error("file origin does not match viewer's");
+      // }
     } catch (ex) {
       PDFViewerApplication.l10n.get("loading_error").then(msg => {
         PDFViewerApplication._documentError(msg, {
@@ -12877,7 +12877,7 @@ const DEFAULT_L10N_STRINGS = {
   page_of_pages: "( of )",
   document_properties_kb: " KB ( bytes)",
   document_properties_mb: " MB ( bytes)",
-  document_properties_date_string: "1696316218221, ",
+  document_properties_date_string: "1696317713697, ",
   document_properties_page_size_unit_inches: "in",
   document_properties_page_size_unit_millimeters: "mm",
   document_properties_page_size_orientation_portrait: "portrait",
@@ -12911,7 +12911,7 @@ const DEFAULT_L10N_STRINGS = {
   missing_file_error: "Missing PDF file.",
   unexpected_response_error: "Unexpected server response.",
   rendering_error: "An error occurred while rendering the page.",
-  annotation_date_string: "1696316218221, ",
+  annotation_date_string: "1696317713697, ",
   printing_not_supported: "Warning: Printing is not fully supported by this browser.",
   printing_not_ready: "Warning: The PDF is not fully loaded for printing.",
   web_fonts_disabled: "Web fonts are disabled: unable to use embedded PDF fonts.",
