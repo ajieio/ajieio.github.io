@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>博客更新</title>
+    <link href="/2024/07/18/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0/"/>
+    <url>/2024/07/18/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0/</url>
+    
+    <content type="html"><![CDATA[<p>在网上冲浪的时候，无意中发现了谷歌分析这一网站分析利器，只一眼便决定将个人博客接入谷歌分析。不过网上的信息有点不全，一直无法成功，最终还是决定使用谷歌分析官网上提供的方式，在代码中加入以下信息（找一个都有的js文件中添加）：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// ga.js</span><br>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">// 创建一个脚本标签</span><br>  <span class="hljs-keyword">var</span> script = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&#x27;script&#x27;</span>);<br>  script.<span class="hljs-property">async</span> = <span class="hljs-literal">true</span>;<br>  script.<span class="hljs-property">src</span> = <span class="hljs-string">&#x27;https://www.googletagmanager.com/gtag/js?id=谷歌分析id&#x27;</span>;<br><br>  <span class="hljs-comment">// 将脚本标签插入到 head 中</span><br>  <span class="hljs-variable language_">document</span>.<span class="hljs-property">head</span>.<span class="hljs-title function_">appendChild</span>(script);<br><br>  <span class="hljs-comment">// 加载完成后执行</span><br>  script.<span class="hljs-property">onload</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">dataLayer</span> = <span class="hljs-variable language_">window</span>.<span class="hljs-property">dataLayer</span> || [];<br>    <span class="hljs-keyword">function</span> <span class="hljs-title function_">gtag</span>(<span class="hljs-params"></span>)&#123;dataLayer.<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">arguments</span>);&#125;<br>    <span class="hljs-title function_">gtag</span>(<span class="hljs-string">&#x27;js&#x27;</span>, <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>());<br>    <span class="hljs-title function_">gtag</span>(<span class="hljs-string">&#x27;config&#x27;</span>, <span class="hljs-string">&#x27;谷歌分析id&#x27;</span>);<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;已经接入谷歌分析！&quot;</span>);<br>  &#125;;<br>&#125;)();<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>sklearn</title>
     <link href="/2023/10/03/%E5%BC%80%E5%A7%8B%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%89%8D%EF%BC%9A%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     <url>/2023/10/03/%E5%BC%80%E5%A7%8B%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%89%8D%EF%BC%9A%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
