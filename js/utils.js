@@ -1,14 +1,26 @@
 /* global Fluid, CONFIG */
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQRJRX7KZ"></script>
+// ga.js
+(function() {
+  // 创建一个脚本标签
+  var script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9HQRJRX7KZ';
 
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+  // 将脚本标签插入到 head 中
+  document.head.appendChild(script);
 
-gtag('config', 'G-9HQRJRX7KZ');
-console.log("已经接入谷歌分析！")
+  // 加载完成后执行
+  script.onload = function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9HQRJRX7KZ');
+    console.log("已经接入谷歌分析！");
+  };
+})();
+
 
 
 window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
