@@ -1,5 +1,15 @@
 /* global Fluid, CONFIG */
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQRJRX7KZ"></script>
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-9HQRJRX7KZ');
+
+
 window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
 
 Fluid.utils = {
